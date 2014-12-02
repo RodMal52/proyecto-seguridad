@@ -1,0 +1,46 @@
+<div class="side-image">
+  <div class="images-wrapper"></div>
+    <div class="content">
+    <h4>General Discussion</h4>
+    <h1>Army Forum</h1>
+    <p>Talk with our retired veterans now</p>
+    <a href="#mensaje">Go to the end of the page</a>
+
+<% entradas.forEach(function (entrada) { %>
+  
+    <div class="comment">
+  <div class="comment-image">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+  </div>
+  <div class="comment-content">
+    <h1><em><%- entrada.usuario %></em></h1>
+    <p><strong><%- entrada.texto %></strong></p>
+  </div>
+</div>
+   
+<%}); %>
+
+<form action="/">
+  <p>
+    <label for="texto">
+      <a name="mensaje">
+        New Message from <strong><%- usuario %></strong>:
+      </a>
+    </label>
+    <br/>
+    <textarea id="texto" type="text" name="texto" cols="60" rows="4"></textarea>
+  </p>
+  <p>
+    <input type="submit" value="Post"/>
+  </p>
+</form>
+
+<form action="/">
+  <p>
+    <input type="submit" name="logout" value="Logout"/>
+  </p>
+</form>
+
+  </div>
+</div>
+
